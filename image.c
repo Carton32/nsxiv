@@ -430,7 +430,7 @@ Imlib_Image img_open(const fileinfo_t *file)
 	}
 	if (im == NULL && (file->flags & FF_WARN))
 		error(0, 0, "%s: Error opening image", file->name);
-		error(0, 0, "%s: Error ", error_return);
+		error(0, 0, "Error %d", error_return);
 	return im;
 }
 
