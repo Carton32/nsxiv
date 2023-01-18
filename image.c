@@ -416,6 +416,7 @@ Imlib_Image img_open(const fileinfo_t *file)
 	if (access(file->path, R_OK) == 0 &&
 	    stat(file->path, &st) == 0 && S_ISREG(st.st_mode))
 	{
+		error(0, 0, "%s: Hi", file->name);
 		im = imlib_load_image(file->path);
 		if (im != NULL) {
 			imlib_context_set_image(im);
